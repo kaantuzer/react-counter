@@ -1,23 +1,13 @@
 import {useState} from 'react'
-export default function(){
-    const [count,setCount] = useState(10)
 
-    function Increase(){
-        setCount(count + 1)
-    }
-    function Decrease(){
-        setCount(count - 1)
-    }
-    function Reset(){
-        setCount(0)
-    }
+export default function Sayac({increase,decrease,reset,count}){
     
     return(
         <div className='container'>
         <p>{count}</p>
-        <button onClick={Increase}>Arttır</button>
-        <button onClick={Decrease}>Azalt</button>
-        <button onClick={Reset}>Resetle</button>
+        <button onClick={increase}>Arttır</button>
+        <button onClick={decrease}>Azalt</button>
+        <button onClick={reset}>Resetle</button>
         </div>
     )
 }
